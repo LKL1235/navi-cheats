@@ -1,20 +1,20 @@
 % navi repo
 
-# add a repository
+# Add a repository
 git clone <repo_url> $(navi info cheats-path)/<repo_name>
 
-# remove a repository
+# Remove a repository
 rm -r $(navi info cheats-path)/<repo_name>
 $repo_name: ls -d $(navi info cheats-path)/* | xargs -n 1 basename
 
-# remove all repositories
+# Remove all repositories
 rm -r $(navi info cheats-path)/*
 
-# update a repository
+# Update a repository
 cd $(navi info cheats-path)/<repo_name> && git pull
 $repo_name: ls -d $(navi info cheats-path)/* | xargs -n 1 basename
 
-# update all repositories
+# Update all repositories
 for dir in $(navi info cheats-path)/*; do
     if [ -d "$dir/.git" ]; then
         echo "update: $dir"

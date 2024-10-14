@@ -1,18 +1,18 @@
 % ps
-# list all running processes
+# List all running processes
 ps -ef
 
-# find process by name
+# Find process by name
 ps -ef | grep <process_name>
 
-# find process by user
+# Find process by user
 ps -ef | grep <user_name>
 
 % task manager
 
-# kill process by name
+# Kill process by name
 pkill <process_name>
 
-# kill process by pid
+# Kill process by pid
 kill <pid>
 $pid: ps -ef | awk '{print $1,$2, $8}'

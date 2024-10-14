@@ -4,17 +4,43 @@
 # List all running containers
 docker ps
 
-# list all containers
+# List all containers
 docker ps -a
 
-# find container by name
+# Find container by name
 docker ps -a | grep <container_name>
 
-# execute a command in a running container
+# Execute a command in a running container
 docker exec -it <container_id> <command>
 
-# print container logs
+# Print container logs
 docker logs <container_id>
 
-# check container logs interactive
+# Check container logs interactive
 docker logs -f <container_id>
+
+# Restart container
+docker restart <container_id_or_name>
+
+# Stop container
+docker stop <container_id_or_name>
+
+# Remove container
+docker rm <container_id_or_name>
+
+# Force remove container
+docker rm -f <container_id_or_name>
+
+# Remove all stopped containers
+docker container prune
+
+% docker image
+
+# List all images
+docker images
+
+# Find image by name
+docker images | grep <image_name>
+
+# Remove image by name
+docker rmi <image_name>

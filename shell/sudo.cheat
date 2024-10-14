@@ -1,4 +1,4 @@
 % sudo
 
-# recall the last command with sudo
+# Recall the last command with sudo
 sudo !!

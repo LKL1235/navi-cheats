@@ -1,38 +1,38 @@
 % find files
 
-# find files in current directory by name
+# Find files in current directory by name
 find . -type f -name "<file_name>"
 
-# find files in current directory by extension
+# Find files in current directory by extension
 find . -type f -name "<*.file_name>"
 
-# find files in specified path by name
+# Find files in specified path by name
 find <find_path> -type f -name  "<file_name>"
 
-# find files in specified path by extension
+# Find files in specified path by extension
 find <find_path> -type f -name "<*.file_name>"
 
-# find filesin specified path with depth
+# Find filesin specified path with depth
 find <find_path> -type f -maxdepth <depth> -name "<file_or_dir_name>"
 
 % find directories
 
-# find directories in current directory by name
+# Find directories in current directory by name
 find . -type d -name "<dir_name>"
 
-# find directories in specified path by name
+# Find directories in specified path by name
 find <find_path> -type d -name "<dir_name>"
 
-# find directories in specified path with depth
+# Find directories in specified path with depth
 find <find_path> -type d -maxdepth <depth> -name "<dir_name>"
 
-% find files and directories
+% Find files and directories
 
-# find files and directories in current directory by name
+# Find files and directories in current directory by name
 find . -name "<file_or_dir_name>"
 
-# find files and directories in specified path by name
+# Find files and directories in specified path by name
 find <find_path> -name "<file_or_dir_name>"
 
-# find files and directories in specified path with depth
+# Find files and directories in specified path with depth
 find <find_path> -maxdepth <depth> -name "<file_or_dir_name>"
