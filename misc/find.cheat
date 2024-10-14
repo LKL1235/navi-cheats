@@ -1,4 +1,4 @@
-% find Usage
+% find
 
 # find files or directory in current directory by name
 find . -name "<file_or_dir_name>"

@@ -1,0 +1,5 @@
+% navi
+
+# remove a repository
+rm -r ~/.local/share/navi/cheats/<repo_name>
+$repo_name: ls -al | awk '{if ($9 != "." && $9 != "..") print $9}'
