@@ -1,0 +1,18 @@
+% find + grep
+
+# find text in files at specified path(show file name)
+find <find_path> -name "<file_or_dir_name>" -exec grep -H "<search_string>" {} \;
+
+# find text in files at specified path(show file name and line number)
+find <find_path> -name "<file_or_dir_name>" -exec grep -Hn "<search_string>" {} \;
+
+# find text in files at specified path(show file name, line number and case insensitive)
+find <find_path> -name "<file_or_dir_name>" -exec grep -Hni "<search_string>" {} \;
+
+% grep
+
+# find text in specified file(show line number)
+grep -n "<search_string>" <file_name>
+
+# find text in specified file(show line number and case insensitive)
+grep -ni "<search_string>" <file_name>

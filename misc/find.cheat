@@ -4,7 +4,19 @@
 find . -name "<file_or_dir_name>"
 
 # find files in current directory by name
-find . -f  -name  "<file_name>"
+find . -type f  -name  "<file_name>"
 
 # find files in current directory by extension
 find . -name "<*.file_name>"
+
+# find files or directory in specified by name
+find <find_path> -name "<file_or_dir_name>"
+
+# find files in specified by name
+find <find_path> -type f -name  "<file_name>"
+
+# find files in specified by extension
+find <find_path> -type f -name "<*.file_name>"
+
+# find files or directory in specified with depth
+find <find_path> -maxdepth <depth> -name "<file_or_dir_name>"

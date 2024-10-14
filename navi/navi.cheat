@@ -1,5 +1,26 @@
 % navi
 
+# add a repository
+git clone <repo_url> $(navi info cheats-path)/<repo_name>
+
 # remove a repository
-rm -r ~/.local/share/navi/cheats/<repo_name>
-$repo_name: ls -al | awk '{if ($9 != "." && $9 != "..") print $9}'
+rm -r $(navi info cheats-path)/<repo_name>
+$repo_name: ls -d $(navi info cheats-path)/* | xargs -n 1 basename
+
+# remove all repositories
+rm -r $(navi info cheats-path)/*
+
+# update a repository
+cd $(navi info cheats-path)/<repo_name> && git pull
+$repo_name: ls -d $(navi info cheats-path)/*
+
+# update all repositories
+for dir in $(navi info cheats-path)/*; do
+    if [ -d "$dir/.git" ]; then
+        echo "update: $dir"
+        cd "$dir" || continue
+        git pull
+    else
+        echo "$dir is not a git repository. skip"
+    fi
+done
