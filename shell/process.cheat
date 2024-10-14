@@ -1,4 +1,4 @@
-% ps
+% ps: process management
 # List all running processes
 ps -ef
 

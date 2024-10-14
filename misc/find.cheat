@@ -1,4 +1,4 @@
-% find files
+% find: find files
 
 # Find files in current directory by name
 find . -type f -name "<file_name>"
@@ -15,7 +15,7 @@ find <find_path> -type f -name "<*.file_name>"
 # Find filesin specified path with depth
 find <find_path> -type f -maxdepth <depth> -name "<file_or_dir_name>"
 
-% find directories
+% find: find directories
 
 # Find directories in current directory by name
 find . -type d -name "<dir_name>"
@@ -26,7 +26,7 @@ find <find_path> -type d -name "<dir_name>"
 # Find directories in specified path with depth
 find <find_path> -type d -maxdepth <depth> -name "<dir_name>"
 
-% Find files and directories
+% find: Find files and directories
 
 # Find files and directories in current directory by name
 find . -name "<file_or_dir_name>"

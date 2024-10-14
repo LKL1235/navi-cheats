@@ -1,4 +1,4 @@
-% systemctl service management
+% systemctl: service management
 
 # Start the service
 systemctl start <service_name>

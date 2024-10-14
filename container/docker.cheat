@@ -1,5 +1,5 @@
 
-% docker container
+% docker: docker container management
 
 # List all running containers
 docker ps
@@ -34,7 +34,7 @@ docker rm -f <container_id_or_name>
 # Remove all stopped containers
 docker container prune
 
-% docker image
+% docker: docker image management
 
 # List all images
 docker images

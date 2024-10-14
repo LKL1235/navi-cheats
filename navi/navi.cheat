@@ -1,4 +1,4 @@
-% navi repo
+% navi: navi repo management
 
 # Add a repository
 git clone <repo_url> $(navi info cheats-path)/<repo_name>

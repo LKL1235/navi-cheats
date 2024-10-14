@@ -1,4 +1,4 @@
-% journalctl
+% journalctl: service logs
 
 # Check logs for a specific unit
 journalctl -u <unit_name>
