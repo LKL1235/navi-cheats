@@ -1,0 +1,4 @@
+% netstat
+
+# list all ports and processes
+netstat -tulnp

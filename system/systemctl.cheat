@@ -1,0 +1,44 @@
+% systemctl service management
+
+# Start the service
+systemctl start <service_name>
+
+# Stop the service
+systemctl stop <service_name>
+
+# Restart the service
+systemctl restart <service_name>
+
+# Reload the service (reload configuration)
+systemctl reload <service_name>
+
+# Check the status of the service
+systemctl status <service_name>
+
+# List all services
+systemctl list-units --type=service
+
+# List all running services
+systemctl list-units --type=service --state=running
+
+# List all not running services
+systemctl list-units --type=service --state=inactive
+
+# List all failed services
+systemctl list-units --type=service --state=failed
+
+# Enable the service (start on boot)
+systemctl enable <service_name>
+
+# Disable the service (do not start on boot)
+systemctl disable <service_name>
+
+# Mask the service (disallow starting)
+systemctl mask <service_name>
+
+# Unmask the service (allow starting)
+systemctl unmask <service_name>
+
+
+
+

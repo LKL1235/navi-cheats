@@ -1,0 +1,7 @@
+% github copilot
+
+# Sugesstion for command line
+gh copilot suggest
+
+# Explain the command
+gh copilot explain "<command>"

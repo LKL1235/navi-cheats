@@ -1,4 +1,4 @@
-% navi
+% navi repo
 
 # add a repository
 git clone <repo_url> $(navi info cheats-path)/<repo_name>
@@ -12,7 +12,7 @@ rm -r $(navi info cheats-path)/*
 
 # update a repository
 cd $(navi info cheats-path)/<repo_name> && git pull
-$repo_name: ls -d $(navi info cheats-path)/*
+$repo_name: ls -d $(navi info cheats-path)/* | xargs -n 1 basename
 
 # update all repositories
 for dir in $(navi info cheats-path)/*; do

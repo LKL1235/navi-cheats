@@ -1,0 +1,16 @@
+% journalctl
+
+# Check logs for a specific unit
+journalctl -u <unit_name>
+
+# Check logs for a specific unit and follow
+journalctl -u <unit_name> -f
+
+# Check logs for a specific unit and follow, displaying timestamps
+journalctl -u <unit_name> -f -o short-precise
+
+# Check logs for a specific unit dont display timestamps
+journalctl -u <unit_name> -o cat
+
+# Check logs for a specific unit and follow
+journalctl -eu <unit_name>

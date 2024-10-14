@@ -1,0 +1,20 @@
+
+% docker container
+
+# List all running containers
+docker ps
+
+# list all containers
+docker ps -a
+
+# find container by name
+docker ps -a | grep <container_name>
+
+# execute a command in a running container
+docker exec -it <container_id> <command>
+
+# print container logs
+docker logs <container_id>
+
+# check container logs interactive
+docker logs -f <container_id>
