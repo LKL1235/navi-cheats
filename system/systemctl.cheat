@@ -1,5 +1,8 @@
 % systemctl: service management
 
+# Reload the systemd manager configuration
+systemctl daemon-reload
+
 # Start the service
 systemctl start <service_name>
 
