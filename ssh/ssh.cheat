@@ -4,4 +4,4 @@
 ssh <user>@<host> '<command>'
 
 # Execute a script on a remote machine
-ssh <user>@<host> 'bash -s' < <local_script.sh>
+ssh <user>@<host> 'bash -s' < <local_script>

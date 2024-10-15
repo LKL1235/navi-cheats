@@ -1,13 +1,13 @@
 % scp: Secure File Copy
 
 # Copy a file from a remote host to the local host
-scp <user>@<host>:</path/to/remote/file> </path/to/local/file>
+scp <user>@<host>:<path_to_remote_file> <path_to_local_file>
 
 # Copy a file from the local host to a remote host
-scp </path/to/local/file> <user>@<host>
+scp <path_to_local_file> <user>@<host>
 
 # Copy a directory from a remote host to the local host
-scp -r <user>@<host>:</path/to/remote/directory> </path/to/local/directory>
+scp -r <user>@<host>:<path_to_remote_directory> <path_to_local_directory>
 
 # Copy a directory from the local host to a remote host
-scp -r </path/to/local/directory> <user>@<host>:</path/to/remote/directory>
+scp -r <path_to_local_directory> <user>@<host>:<path_to_remote_directory>
