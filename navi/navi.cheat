@@ -1,5 +1,11 @@
 % navi: navi repo management
 
+# Print default config path
+navi info cheats-path
+
+# List all config at default path
+ls -d $(navi info cheats-path)/*
+
 # Add a repository
 git clone <repo_url> $(navi info cheats-path)/<repo_name>
 
@@ -24,3 +30,11 @@ for dir in $(navi info cheats-path)/*; do
         echo "$dir is not a git repository. skip"
     fi
 done
+
+% navi: navi config
+
+# Print default config path
+navi info config-path
+
+# Print default config example
+navi info config-example
