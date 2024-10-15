@@ -1,0 +1,7 @@
+% ssh
+
+# Execute a command on a remote machine(mutiple commands can be separated by ';')
+ssh <user>@<host> '<command>'
+
+# Execute a script on a remote machine
+ssh <user>@<host> 'bash -s' < <local_script.sh>

@@ -1,12 +1,12 @@
-% find + grep
+% find + grep: find text in files
 
-# Find text in files at specified path(show file name)
+# Find text in files at <path> (show file name)
 find <find_path> -name "<file_or_dir_name>" -exec grep -H "<search_string>" {} \;
 
-# Find text in files at specified path(show file name and line number)
+# Find text in files at <path>(show file name, line number)
 find <find_path> -name "<file_or_dir_name>" -exec grep -Hn "<search_string>" {} \;
 
-# Find text in files at specified path(show file name, line number and case insensitive)
+# Find text in files at <path>(file name,line number,case insensitive)
 find <find_path> -name "<file_or_dir_name>" -exec grep -Hni "<search_string>" {} \;
 
 % grep
@@ -14,5 +14,5 @@ find <find_path> -name "<file_or_dir_name>" -exec grep -Hni "<search_string>" {}
 # Find text in specified file(show line number)
 grep -n "<search_string>" <file_name>
 
-# Find text in specified file(show line number and case insensitive)
+# Find text in specified file(line number,case insensitive)
 grep -ni "<search_string>" <file_name>
