@@ -12,31 +12,31 @@ docker ps -a | grep <container_name>
 
 # Execute a command in a running container
 docker exec -it <container_id_or_name> <command>
-$container_id_or_name: docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}"
+$container_id_or_name: docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}" --- --header-lines 1 --column 2
 
 # Print container logs
 docker logs <container_id_or_name>
-$container_id_or_name: docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}"
+$container_id_or_name: docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}" --- --header-lines 1 --column 2
 
 # Check container logs interactive
 docker logs -f <container_id_or_name>
-$container_id_or_name: docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}"
+$container_id_or_name: docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}" --- --header-lines 1 --column 2
 
 # Restart container
 docker restart <container_id_or_name>
-$container_id_or_name: docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}"
+$container_id_or_name: docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}" --- --header-lines 1 --column 2
 
 # Stop container
 docker stop <container_id_or_name>
-$container_id_or_name: docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}"
+$container_id_or_name: docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}" --- --header-lines 1 --column 2
 
 # Remove container
 docker rm <container_id_or_name>
-$container_id_or_name: docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}"
+$container_id_or_name: docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}" --- --header-lines 1 --column 2
 
 # Force remove container
 docker rm -f <container_id_or_name>
-$container_id_or_name: docker ps -a --filter "status=exited" --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}"
+$container_id_or_name: docker ps -a --filter "status=exited" --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}" --- --header-lines 1 --column 2
 
 # Remove all stopped containers
 docker container prune
