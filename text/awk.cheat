@@ -1,0 +1,7 @@
+% awk
+
+# Set field-separator
+<input> | awk -F<separator> '{print $<which_cloumn>}'
+
+# Remove output head
+<input> | awk 'NR > <head_line_count>'
