@@ -16,4 +16,4 @@ $process_name: ps -u $USER --- --column 2 --header-lines 1 --map "awk '{for(i=2;
 
 # Kill process by pid
 kill <pid>
-$pid: ps -u $USER --- --column 3 --header-lines 1 --preview 'echo {}'
+$pid: ps -u $USER --- --column 1 --header-lines 1 --preview 'echo {}' --map "awk '{print $1}'"
