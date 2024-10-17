@@ -17,24 +17,24 @@ $session_name: tmux ls --- --preview "echo {}" --map "awk -F ':' '{print $1}'"
 tmux kill-session -t <session_name>
 $session_name: tmux ls --- --preview "echo {}" --map "awk -F ':' '{print $1}'"
 
-# Split pane horizontally
+# Split pane horizontally ctrl+b %
 tmux split-window -h
 
-# Split pane vertically
+# Split pane vertically ctrl+b "
 tmux split-window -v
 
-# List all panes
+# List all panes ctrl+b q
 tmux list-panes
 
-# List all windows
+# List all windows ctrl+b w
 tmux list-windows
 
-# Change pane layout
+# Change pane layout ctrl+b space
 tmux select-layout <layout>
 $layout: echo "even-horizontal" && echo "even-vertical" && echo "main-horizontal" && echo "main-vertical" && echo "tiled"
 
-# Choose a window
+# Choose a window ctrl+b w
 tmux choose-window
 
-# Choose a session
+# Choose a session ctrl+b s
 tmux choose-session
