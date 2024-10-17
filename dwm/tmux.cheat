@@ -38,3 +38,7 @@ tmux choose-window
 
 # Choose a session ctrl+b s
 tmux choose-session
+
+# Change pane ctrl+b o
+tmux select-pane -t <pane_number>
+$pane_number: tmux list-panes --- --preview "echo {}" --map "awk -F ':' '{print $1}'"
