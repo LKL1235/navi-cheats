@@ -1,0 +1,40 @@
+% tmux
+
+# Start a new session
+tmux
+
+# List all sessions
+tmux ls
+
+# Back to previous session
+tmux attach-session -d
+
+# Attach to a session
+tmux attach -t <session_name>
+$session_name tmux ls --- --preview "echo {}" --map "awk -F ':' '{print $1}'"
+
+# Kill a session
+tmux kill-session -t <session_name>
+$session_name tmux ls --- --preview "echo {}" --map "awk -F ':' '{print $1}'"
+
+# Split pane horizontally
+tmux split-window -h
+
+# Split pane vertically
+tmux split-window -v
+
+# List all panes
+tmux list-panes
+
+# List all windows
+tmux list-windows
+
+# Change pane layout
+tmux select-layout <layout>
+$layout: echo "even-horizontal" && echo "even-vertical" && echo "main-horizontal" && echo "main-vertical" && echo "tiled"
+
+# Choose a window
+tmux choose-window
+
+# Choose a session
+tmux choose-session

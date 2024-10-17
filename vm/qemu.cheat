@@ -1,0 +1,31 @@
+% qemu
+
+# Install from git
+git clone https://gitlab.com/qemu-project/qemu.git && \
+    cd qemu && \
+    git submodule init && \
+    git submodule update --recursive && \
+    ./configure --prefix=<path_to_install> --enable-slirp --enable-kvm --target-list=x86_64-softmmu --enable-vnc && \
+    make && \
+    make install
+$path_to_install echo "$HOME/.local"
+
+# Create a new disk image
+qemu-img create -f qcow2 <path_your_disk_image_name> <size_in_GB>G
+
+# Start a VM(first time)
+qemu-system-x86_64 -boot d -cdrom <path_your_mirror_iso> \
+ -hda <path_your_disk_image_name> -m <memory_size_M> -smp <cores_count> -net nic -net user,hostfwd=tcp::28886-:22 \
+ -vnc :1
+
+# Start a VM
+qemu-system-x86_64 -hda <path_your_disk_image_name> \
+ -m <memory_size_M> -smp <cores_count> \
+ -net nic -net user,hostfwd=tcp::28886-:22 \
+ -vnc :1
+
+# Start a VM withou GUI
+qemu-system-x86_64 -hda <path_your_disk_image_name> \
+ -m <memory_size_M> -smp <cores_count> \
+ -net nic -net user,hostfwd=tcp::28886-:22 \
+ -nographic
