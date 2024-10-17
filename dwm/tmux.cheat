@@ -11,11 +11,11 @@ tmux attach-session -d
 
 # Attach to a session
 tmux attach -t <session_name>
-$session_name tmux ls --- --preview "echo {}" --map "awk -F ':' '{print $1}'"
+$session_name: tmux ls --- --preview "echo {}" --map "awk -F ':' '{print $1}'"
 
 # Kill a session
 tmux kill-session -t <session_name>
-$session_name tmux ls --- --preview "echo {}" --map "awk -F ':' '{print $1}'"
+$session_name: tmux ls --- --preview "echo {}" --map "awk -F ':' '{print $1}'"
 
 # Split pane horizontally
 tmux split-window -h
